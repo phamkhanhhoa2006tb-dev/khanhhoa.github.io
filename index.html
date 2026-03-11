@@ -7,7 +7,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pham Khanh Hoa Portfolio</title>
+<title>Phạm Khánh Hòa Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -15,19 +17,21 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial, sans-serif;
 }
 
 body{
-background:#0f172a;
-color:white;
+background:#fff0f6;
+color:#333;
 }
+
+/* NAVBAR */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
-background:#020617;
+background:#ffc0cb;
 padding:15px;
 text-align:center;
 }
@@ -40,8 +44,10 @@ font-weight:bold;
 }
 
 nav a:hover{
-color:#38bdf8;
+color:#ff69b4;
 }
+
+/* HERO */
 
 .hero{
 height:100vh;
@@ -50,18 +56,26 @@ justify-content:center;
 align-items:center;
 flex-direction:column;
 text-align:center;
-background:linear-gradient(135deg,#020617,#0f172a);
+background:linear-gradient(135deg,#ffd6e7,#fff);
+}
+
+.avatar{
+width:150px;
+border-radius:50%;
+margin-bottom:20px;
 }
 
 .hero h1{
-font-size:55px;
+font-size:45px;
+color:#d63384;
 }
 
 .hero p{
 margin-top:10px;
 font-size:20px;
-color:#94a3b8;
 }
+
+/* SECTION */
 
 section{
 padding:80px 20px;
@@ -72,55 +86,55 @@ margin:auto;
 h2{
 text-align:center;
 margin-bottom:40px;
-font-size:32px;
+color:#d63384;
 }
+
+/* ABOUT */
 
 .about{
 text-align:center;
 line-height:1.7;
-color:#cbd5f5;
 }
 
+/* SKILLS */
+
 .skills{
-margin-top:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
 }
 
 .skill{
-margin-bottom:20px;
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
 }
 
-.skill-name{
-margin-bottom:5px;
-}
-
-.skill-bar{
-height:8px;
-background:#1e293b;
-border-radius:10px;
-}
-
-.skill-fill{
-height:8px;
-background:#38bdf8;
-border-radius:10px;
-}
+/* LIST */
 
 .list{
 text-align:center;
 line-height:2;
-color:#cbd5f5;
 }
+
+/* CONTACT */
 
 .contact{
 text-align:center;
 line-height:2;
+font-size:18px;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
-padding:25px;
-background:#020617;
-color:#94a3b8;
+padding:20px;
+background:#ffc0cb;
+color:white;
+margin-top:40px;
 }
 
 </style>
@@ -142,19 +156,20 @@ color:#94a3b8;
 
 <section class="hero">
 
+<img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png" class="avatar">
+
 <h1>Phạm Khánh Hòa</h1>
 
-<p>Second-year student • Foreign Trade University</p>
+<p>International Economics Student</p>
 
-<p>Interested in programming, technology and data analysis</p>
+<p>Foreign Trade University • Class of 2024</p>
 
 </section>
 
 
-```html
 <section id="about">
 
-<h2>About Me</h2>
+<h2><i class="fa-solid fa-user"></i> About Me</h2>
 
 <p class="about">
 
@@ -162,11 +177,11 @@ Hello! My name is <b>Phạm Khánh Hòa</b>.
 
 I was born on <b>March 9, 2006</b>.
 
-I am currently a <b>second-year student majoring in International Economics at Foreign Trade University (FTU)</b> in Vietnam.
+I am currently a <b>second-year student majoring in International Economics at Foreign Trade University (FTU)</b>.
 
 My hometown is <b>Hung Yen province (former Thai Binh)</b>.
 
-I am interested in technology, programming and data analysis. I enjoy learning new skills, exploring new knowledge and improving myself.
+I am interested in technology, programming and data analysis. I enjoy learning new skills and exploring new knowledge.
 
 </p>
 
@@ -175,54 +190,27 @@ I am interested in technology, programming and data analysis. I enjoy learning n
 
 <section id="skills">
 
-<h2>Skills</h2>
+<h2><i class="fa-solid fa-star"></i> Skills</h2>
 
 <div class="skills">
 
-<div class="skill">
-<div class="skill-name">Microsoft Word</div>
-<div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-</div>
+<div class="skill"><i class="fa-solid fa-file-word"></i><br>Microsoft Word</div>
 
-<div class="skill">
-<div class="skill-name">Microsoft Excel</div>
-<div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-</div>
+<div class="skill"><i class="fa-solid fa-file-excel"></i><br>Microsoft Excel</div>
 
-<div class="skill">
-<div class="skill-name">PowerPoint</div>
-<div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-</div>
+<div class="skill"><i class="fa-solid fa-file-powerpoint"></i><br>PowerPoint</div>
 
-<div class="skill">
-<div class="skill-name">CapCut</div>
-<div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-</div>
+<div class="skill"><i class="fa-solid fa-video"></i><br>CapCut</div>
 
-<div class="skill">
-<div class="skill-name">Photo Editing</div>
-<div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
-</div>
+<div class="skill"><i class="fa-solid fa-image"></i><br>Photo Editing</div>
 
-<div class="skill">
-<div class="skill-name">Basic Python Programming</div>
-<div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
-</div>
+<div class="skill"><i class="fa-brands fa-python"></i><br>Basic Python</div>
 
-<div class="skill">
-<div class="skill-name">English</div>
-<div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-</div>
+<div class="skill"><i class="fa-solid fa-language"></i><br>English</div>
 
-<div class="skill">
-<div class="skill-name">Chinese</div>
-<div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
-</div>
+<div class="skill"><i class="fa-solid fa-language"></i><br>Chinese</div>
 
-<div class="skill">
-<div class="skill-name">Teaching / Pedagogical Skills</div>
-<div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
-</div>
+<div class="skill"><i class="fa-solid fa-chalkboard-user"></i><br>Teaching Skills</div>
 
 </div>
 
@@ -231,7 +219,7 @@ I am interested in technology, programming and data analysis. I enjoy learning n
 
 <section id="interests">
 
-<h2>Interests</h2>
+<h2><i class="fa-solid fa-heart"></i> Interests</h2>
 
 <div class="list">
 
@@ -246,18 +234,15 @@ I am interested in technology, programming and data analysis. I enjoy learning n
 </section>
 
 
-```html
 <section id="education">
 
-<h2>Education</h2>
+<h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
 
 <div class="list">
 
 <p><b>Foreign Trade University (FTU)</b></p>
 
 <p>Major: International Economics</p>
-
-<p>Bachelor Student</p>
 
 <p>2024 – Present</p>
 
@@ -268,14 +253,15 @@ I am interested in technology, programming and data analysis. I enjoy learning n
 
 <section id="contact">
 
-<h2>Contact</h2>
+<h2><i class="fa-solid fa-envelope"></i> Contact</h2>
 
 <div class="contact">
 
-<p>Email: phamkhanhhoa2006tb@gmail.com</p>
+<p><i class="fa-solid fa-envelope"></i> phamkhanhhoa2006tb@gmail.com</p>
 
-<p>Github:  
-<a href="https://github.com/phamkhanhhoa2006tb-dev" style="color:#38bdf8">
+<p>
+<i class="fa-brands fa-github"></i>
+<a href="https://github.com/phamkhanhhoa2006tb-dev">
 github.com/phamkhanhhoa2006tb-dev
 </a>
 </p>
