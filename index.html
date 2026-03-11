@@ -17,7 +17,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family: 'Segoe UI', sans-serif;
 }
 
 body{
@@ -34,6 +34,7 @@ width:100%;
 background:#ffc0cb;
 padding:15px;
 text-align:center;
+z-index:1000;
 }
 
 nav a{
@@ -52,16 +53,20 @@ color:#ff69b4;
 .hero{
 height:100vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-flex-direction:column;
 text-align:center;
 background:linear-gradient(135deg,#ffd6e7,#fff);
 }
 
 .avatar{
-width:150px;
+width:160px;
+height:160px;
 border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+box-shadow:0 0 20px rgba(255,105,180,0.5);
 margin-bottom:20px;
 }
 
@@ -70,9 +75,10 @@ font-size:45px;
 color:#d63384;
 }
 
-.hero p{
-margin-top:10px;
+.typing{
 font-size:20px;
+margin-top:10px;
+color:#444;
 }
 
 /* SECTION */
@@ -106,10 +112,15 @@ gap:20px;
 
 .skill{
 background:white;
-padding:20px;
+padding:25px;
 border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 text-align:center;
+transition:0.3s;
+}
+
+.skill:hover{
+transform:translateY(-6px);
 }
 
 /* LIST */
@@ -125,6 +136,11 @@ line-height:2;
 text-align:center;
 line-height:2;
 font-size:18px;
+}
+
+.contact a{
+color:#d63384;
+text-decoration:none;
 }
 
 /* FOOTER */
@@ -156,13 +172,11 @@ margin-top:40px;
 
 <section class="hero">
 
-<img src="https://cdn-icons-png.flaticon.com/512/6997/6997662.png" class="avatar">
+<img src="avatar.jpg" class="avatar">
 
 <h1>Phạm Khánh Hòa</h1>
 
-<p>International Economics Student</p>
-
-<p>Foreign Trade University • Class of 2024</p>
+<p class="typing" id="typing"></p>
 
 </section>
 
@@ -181,7 +195,7 @@ I am currently a <b>second-year student majoring in International Economics at F
 
 My hometown is <b>Hung Yen province (former Thai Binh)</b>.
 
-I am interested in technology, programming and data analysis. I enjoy learning new skills and exploring new knowledge.
+I am interested in technology, programming and data analysis.
 
 </p>
 
@@ -194,22 +208,14 @@ I am interested in technology, programming and data analysis. I enjoy learning n
 
 <div class="skills">
 
-<div class="skill"><i class="fa-solid fa-file-word"></i><br>Microsoft Word</div>
-
-<div class="skill"><i class="fa-solid fa-file-excel"></i><br>Microsoft Excel</div>
-
+<div class="skill"><i class="fa-solid fa-file-word"></i><br>Word</div>
+<div class="skill"><i class="fa-solid fa-file-excel"></i><br>Excel</div>
 <div class="skill"><i class="fa-solid fa-file-powerpoint"></i><br>PowerPoint</div>
-
 <div class="skill"><i class="fa-solid fa-video"></i><br>CapCut</div>
-
 <div class="skill"><i class="fa-solid fa-image"></i><br>Photo Editing</div>
-
 <div class="skill"><i class="fa-brands fa-python"></i><br>Basic Python</div>
-
 <div class="skill"><i class="fa-solid fa-language"></i><br>English</div>
-
 <div class="skill"><i class="fa-solid fa-language"></i><br>Chinese</div>
-
 <div class="skill"><i class="fa-solid fa-chalkboard-user"></i><br>Teaching Skills</div>
 
 </div>
@@ -241,9 +247,7 @@ I am interested in technology, programming and data analysis. I enjoy learning n
 <div class="list">
 
 <p><b>Foreign Trade University (FTU)</b></p>
-
 <p>Major: International Economics</p>
-
 <p>2024 – Present</p>
 
 </div>
@@ -277,7 +281,24 @@ github.com/phamkhanhhoa2006tb-dev
 
 </footer>
 
-</body>
 
+<script>
+
+const text = "International Economics Student • Interested in Technology & Programming";
+let i = 0;
+
+function typing(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,40);
+}
+}
+
+typing();
+
+</script>
+
+</body>
 </html>
 ```
