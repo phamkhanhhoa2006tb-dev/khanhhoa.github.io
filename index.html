@@ -22,7 +22,7 @@ font-family:Segoe UI, sans-serif;
 }
 
 body{
-background:#ffffff;
+background:linear-gradient(180deg,#ffffff,#fff0f3);
 color:#333;
 }
 
@@ -53,39 +53,40 @@ color:#d62839;
 /* HERO */
 
 .hero{
-height:90vh;
+height:95vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+background:linear-gradient(135deg,#ffffff,#ffe5ec);
 }
 
 .avatar{
-width:180px;
-height:180px;
+width:190px;
+height:190px;
 border-radius:50%;
 object-fit:cover;
-border:5px solid white;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+border:6px solid white;
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
 margin-bottom:20px;
 }
 
 .hero h1{
-font-size:42px;
+font-size:44px;
 color:#d62839;
 }
 
 .hero p{
 margin-top:10px;
-color:#666;
+color:#555;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
-padding:80px 20px;
-max-width:900px;
+padding:90px 20px;
+max-width:950px;
 margin:auto;
 }
 
@@ -99,16 +100,26 @@ color:#d62839;
 
 .card{
 background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
+padding:35px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.07);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
 }
 
 /* ABOUT */
 
 .about{
-line-height:1.8;
-text-align:center;
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+.about img{
+width:120px;
 }
 
 /* MBTI */
@@ -120,13 +131,13 @@ gap:25px;
 }
 
 .mbti img{
-width:130px;
+width:120px;
 }
 
 /* SKILLS */
 
 .skill{
-margin-bottom:18px;
+margin-bottom:20px;
 }
 
 .skill-name{
@@ -146,13 +157,6 @@ background:linear-gradient(90deg,#ff8fa3,#d62839);
 border-radius:10px;
 }
 
-/* EDUCATION */
-
-.edu{
-text-align:center;
-line-height:1.8;
-}
-
 /* CONTACT */
 
 .contact{
@@ -165,17 +169,13 @@ color:#d62839;
 margin-right:8px;
 }
 
-.contact a{
-color:#d62839;
-text-decoration:none;
-}
-
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:30px;
+padding:35px;
 color:#777;
+margin-top:40px;
 }
 
 </style>
@@ -210,9 +210,11 @@ color:#777;
 
 <section id="about">
 
-<h2>About Me</h2>
+<h2><i class="fa-solid fa-user"></i> About Me</h2>
 
 <div class="card about">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 
 <p>
 
@@ -234,7 +236,7 @@ I am interested in technology, programming and data analysis. I enjoy learning n
 
 <section id="mbti">
 
-<h2>MBTI Personality</h2>
+<h2><i class="fa-solid fa-brain"></i> MBTI Personality</h2>
 
 <div class="card mbti">
 
@@ -259,7 +261,7 @@ I also value collaboration and empathy, which helps me communicate ideas clearly
 
 <section id="skills">
 
-<h2>Skills</h2>
+<h2><i class="fa-solid fa-star"></i> Skills</h2>
 
 <div class="card">
 
@@ -322,15 +324,17 @@ I also value collaboration and empathy, which helps me communicate ideas clearly
 
 <section id="education">
 
-<h2>Education</h2>
+<h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
 
-<div class="card edu">
+<div class="card">
 
-<p><b>Foreign Trade University</b></p>
+<p style="text-align:center">
 
-<p>Major: International Economics</p>
+<b>Foreign Trade University</b><br>
+Major: International Economics<br>
+2024 – Present
 
-<p>2024 – Present</p>
+</p>
 
 </div>
 
@@ -339,7 +343,7 @@ I also value collaboration and empathy, which helps me communicate ideas clearly
 
 <section id="contact">
 
-<h2>Contact</h2>
+<h2><i class="fa-solid fa-envelope"></i> Contact</h2>
 
 <div class="card contact">
 
@@ -350,9 +354,7 @@ phamkhanhhoa2006tb@gmail.com
 
 <p>
 <i class="fa-brands fa-github"></i>
-<a href="https://github.com/phamkhanhhoa2006tb-dev">
 github.com/phamkhanhhoa2006tb-dev
-</a>
 </p>
 
 </div>
