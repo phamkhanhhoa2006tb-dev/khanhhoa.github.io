@@ -5,11 +5,11 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Pham Khanh Hoa Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -20,145 +20,146 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#e8ffe8,#ffd6de);
-color:#333;
+font-family:Poppins;
+line-height:1.6;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
 position:fixed;
 top:0;
 width:100%;
 background:white;
-border-bottom:2px solid #ff4d6d;
-padding:16px;
+padding:15px;
 text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
 z-index:1000;
 }
 
 nav a{
 margin:0 20px;
 text-decoration:none;
-font-weight:500;
 color:#333;
-}
-
-nav a:hover{
-color:#ff4d6d;
+font-weight:500;
 }
 
 /* HERO */
 
 .hero{
-height:95vh;
+background:#e63946;
+color:white;
+height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(135deg,#b8f2b8,#ffccd5);
+padding:20px;
 }
 
-.avatar{
-width:190px;
-height:190px;
+.hero img{
+width:180px;
+height:180px;
 border-radius:50%;
 object-fit:cover;
 border:6px solid white;
-box-shadow:0 12px 35px rgba(0,0,0,0.2);
 margin-bottom:20px;
 }
 
 .hero h1{
-font-size:46px;
-color:#e63946;
+font-family:"Bebas Neue";
+font-size:80px;
+letter-spacing:3px;
 }
 
 .hero p{
-margin-top:10px;
-color:#444;
+font-size:18px;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
-padding:90px 20px;
-max-width:950px;
+padding:80px 20px;
+}
+
+.container{
+max-width:1000px;
 margin:auto;
 }
 
-h2{
-text-align:center;
-margin-bottom:40px;
-color:#e63946;
-}
+/* ABOUT */
 
-/* CARD */
-
-.card{
+.about{
 background:white;
-padding:35px;
-border-radius:16px;
-box-shadow:0 12px 30px rgba(0,0,0,0.08);
-transition:0.3s;
+text-align:center;
 }
 
-.card:hover{
-transform:translateY(-6px);
-}
-
-/* TEXT */
-
-.about,
-.mbti{
-line-height:1.8;
+.about h2{
+margin-bottom:20px;
+font-size:32px;
 }
 
 /* SKILLS */
 
-.skill{
+.skills{
+background:#2ecc71;
+color:white;
+}
+
+.skills h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.skill-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill-box{
+background:white;
+color:#333;
+padding:20px;
+border-radius:10px;
+text-align:center;
+font-weight:500;
+}
+
+/* EDUCATION */
+
+.education{
+background:#ffe5ec;
+text-align:center;
+}
+
+.education h2{
 margin-bottom:20px;
-}
-
-.skill-name{
-margin-bottom:6px;
-}
-
-.bar{
-height:8px;
-background:#eee;
-border-radius:10px;
-}
-
-.fill{
-height:8px;
-background:linear-gradient(90deg,#ff4d6d,#2ecc71);
-border-radius:10px;
 }
 
 /* CONTACT */
 
 .contact{
+background:#e63946;
+color:white;
 text-align:center;
-line-height:2;
 }
 
 .contact i{
 margin-right:8px;
-color:#ff4d6d;
 }
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:40px;
-color:#777;
+padding:20px;
+background:#111;
+color:white;
 }
 
 </style>
@@ -170,7 +171,6 @@ color:#777;
 <nav>
 
 <a href="#about">About</a>
-<a href="#mbti">MBTI</a>
 <a href="#skills">Skills</a>
 <a href="#education">Education</a>
 <a href="#contact">Contact</a>
@@ -180,56 +180,33 @@ color:#777;
 
 <section class="hero">
 
-<img src="avt.jpg" class="avatar">
+<img src="avt.jpg">
 
-<h1>Phạm Khánh Hòa</h1>
+<h1>PHAM KHANH HOA</h1>
 
-<p>International Economics Student • Foreign Trade University</p>
-
-<p>Interested in Data, Technology and Problem Solving</p>
+<p>International Economics Student</p>
+<p>Foreign Trade University</p>
 
 </section>
 
 
-<section id="about">
+<section id="about" class="about">
 
-<h2><i class="fa-solid fa-user"></i> About Me</h2>
+<div class="container">
 
-<div class="card about">
+<h2>About Me</h2>
 
 <p>
 
-Hello! My name is <b>Phạm Khánh Hòa</b>.  
-I was born on <b>March 9, 2006</b>.
+Hello! My name is <b>Phạm Khánh Hòa</b>.
 
-I am currently a <b>second-year student majoring in International Economics at Foreign Trade University</b>.
+I was born on March 9, 2006.
 
-My hometown is <b>Hung Yen province (former Thai Binh)</b>.
+I am currently a second-year student majoring in International Economics at Foreign Trade University.
 
-I am interested in technology, programming and data analysis. I enjoy learning new skills and exploring new knowledge.
+My hometown is Hung Yen (former Thai Binh).
 
-</p>
-
-</div>
-
-</section>
-
-
-<section id="mbti">
-
-<h2><i class="fa-solid fa-brain"></i> MBTI Personality</h2>
-
-<div class="card mbti">
-
-<p>
-
-I have an <b>INFJ personality type</b>, which means I tend to think deeply and approach problems in a thoughtful and analytical way.
-
-I enjoy understanding complex ideas, exploring patterns, and finding meaningful solutions.
-
-I am naturally detail-oriented and motivated to learn continuously, especially in areas related to data, technology, and problem solving.
-
-I also value collaboration and empathy, which helps me communicate ideas clearly and work effectively with others.
+I am interested in technology, programming and data analysis.
 
 </p>
 
@@ -238,62 +215,23 @@ I also value collaboration and empathy, which helps me communicate ideas clearly
 </section>
 
 
-<section id="skills">
+<section id="skills" class="skills">
 
-<h2><i class="fa-solid fa-star"></i> Skills</h2>
+<div class="container">
 
-<div class="card">
+<h2>Skills</h2>
 
-<h3><i class="fa-solid fa-chart-simple"></i> Data & Office Tools</h3>
+<div class="skill-grid">
 
-<div class="skill">
-<div class="skill-name">Microsoft Excel</div>
-<div class="bar"><div class="fill" style="width:100%"></div></div>
-</div>
+<div class="skill-box">Microsoft Excel</div>
+<div class="skill-box">Microsoft Word</div>
+<div class="skill-box">Microsoft PowerPoint</div>
+<div class="skill-box">Microsoft Access</div>
+<div class="skill-box">Python (Basic)</div>
+<div class="skill-box">Vietnamese (Native)</div>
+<div class="skill-box">English (Fluent)</div>
+<div class="skill-box">Chinese (Basic)</div>
 
-<div class="skill">
-<div class="skill-name">Microsoft Word</div>
-<div class="bar"><div class="fill" style="width:100%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">Microsoft PowerPoint</div>
-<div class="bar"><div class="fill" style="width:100%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">Microsoft Access</div>
-<div class="bar"><div class="fill" style="width:100%"></div></div>
-</div>
-
-
-<h3 style="margin-top:30px">
-<i class="fa-solid fa-code"></i> Programming
-</h3>
-
-<div class="skill">
-<div class="skill-name">Python (Basic)</div>
-<div class="bar"><div class="fill" style="width:60%"></div></div>
-</div>
-
-
-<h3 style="margin-top:30px">
-<i class="fa-solid fa-language"></i> Languages
-</h3>
-
-<div class="skill">
-<div class="skill-name">Vietnamese (Native)</div>
-<div class="bar"><div class="fill" style="width:100%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">English (Fluent)</div>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">Chinese (Basic)</div>
-<div class="bar"><div class="fill" style="width:50%"></div></div>
 </div>
 
 </div>
@@ -301,40 +239,32 @@ I also value collaboration and empathy, which helps me communicate ideas clearly
 </section>
 
 
-<section id="education">
+<section id="education" class="education">
 
-<h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+<div class="container">
 
-<div class="card">
+<h2>Education</h2>
 
-<p style="text-align:center">
+<p><b>Foreign Trade University</b></p>
 
-<b>Foreign Trade University</b><br>
-Major: International Economics<br>
-2024 – Present
+<p>Major: International Economics</p>
 
-</p>
+<p>2024 – Present</p>
 
 </div>
 
 </section>
 
 
-<section id="contact">
+<section id="contact" class="contact">
 
-<h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+<div class="container">
 
-<div class="card contact">
+<h2>Contact</h2>
 
-<p>
-<i class="fa-solid fa-envelope"></i>
-phamkhanhhoa2006tb@gmail.com
-</p>
+<p><i class="fa-solid fa-envelope"></i> phamkhanhhoa2006tb@gmail.com</p>
 
-<p>
-<i class="fa-brands fa-github"></i>
-github.com/phamkhanhhoa2006tb-dev
-</p>
+<p><i class="fa-brands fa-github"></i> github.com/phamkhanhhoa2006tb-dev</p>
 
 </div>
 
@@ -343,7 +273,7 @@ github.com/phamkhanhhoa2006tb-dev
 
 <footer>
 
-<p>© 2026 Phạm Khánh Hòa</p>
+© 2026 Phạm Khánh Hòa
 
 </footer>
 
