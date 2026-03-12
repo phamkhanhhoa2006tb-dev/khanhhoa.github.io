@@ -3,12 +3,14 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Pham Khanh Hoa Portfolio</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -41,11 +43,11 @@ nav a{
 margin:0 20px;
 text-decoration:none;
 font-weight:600;
-color:#333;
+color:#555;
 }
 
 nav a:hover{
-color:#e63946;
+color:#d62839;
 }
 
 /* HERO */
@@ -57,26 +59,26 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding-top:60px;
 }
 
 .avatar{
-width:160px;
-height:160px;
+width:180px;
+height:180px;
 border-radius:50%;
 object-fit:cover;
+border:5px solid white;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 margin-bottom:20px;
 }
 
 .hero h1{
 font-size:42px;
-color:#e63946;
+color:#d62839;
 }
 
 .hero p{
 margin-top:10px;
-font-size:18px;
-color:#555;
+color:#666;
 }
 
 /* SECTIONS */
@@ -90,28 +92,45 @@ margin:auto;
 h2{
 text-align:center;
 margin-bottom:40px;
-color:#e63946;
+color:#d62839;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
 }
 
 /* ABOUT */
 
 .about{
+line-height:1.8;
 text-align:center;
-line-height:1.7;
+}
+
+/* MBTI */
+
+.mbti{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+.mbti img{
+width:130px;
 }
 
 /* SKILLS */
 
-.skill-category{
-margin-bottom:40px;
-}
-
 .skill{
-margin-bottom:15px;
+margin-bottom:18px;
 }
 
 .skill-name{
-margin-bottom:5px;
+margin-bottom:6px;
 font-weight:500;
 }
 
@@ -123,17 +142,15 @@ border-radius:10px;
 
 .fill{
 height:8px;
-background:#ffb3c1;
+background:linear-gradient(90deg,#ff8fa3,#d62839);
 border-radius:10px;
 }
 
-/* CARD */
+/* EDUCATION */
 
-.card{
-background:#fff5f7;
-padding:25px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+.edu{
+text-align:center;
+line-height:1.8;
 }
 
 /* CONTACT */
@@ -143,8 +160,13 @@ text-align:center;
 line-height:2;
 }
 
+.contact i{
+color:#d62839;
+margin-right:8px;
+}
+
 .contact a{
-color:#e63946;
+color:#d62839;
 text-decoration:none;
 }
 
@@ -152,13 +174,12 @@ text-decoration:none;
 
 footer{
 text-align:center;
-padding:20px;
-border-top:1px solid #eee;
-margin-top:40px;
+padding:30px;
 color:#777;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -166,6 +187,7 @@ color:#777;
 <nav>
 
 <a href="#about">About</a>
+<a href="#mbti">MBTI</a>
 <a href="#skills">Skills</a>
 <a href="#education">Education</a>
 <a href="#contact">Contact</a>
@@ -175,13 +197,13 @@ color:#777;
 
 <section class="hero">
 
-<img src="avatar.jpg" class="avatar">
+<img src="avt.jpg" class="avatar">
 
 <h1>Phạm Khánh Hòa</h1>
 
 <p>International Economics Student • Foreign Trade University</p>
 
-<p>Interested in Data, Technology and Programming</p>
+<p>Interested in Data, Technology and Problem Solving</p>
 
 </section>
 
@@ -194,15 +216,39 @@ color:#777;
 
 <p>
 
-Hello! My name is <b>Phạm Khánh Hòa</b>.
-
+Hello! My name is <b>Phạm Khánh Hòa</b>.  
 I was born on <b>March 9, 2006</b>.
 
 I am currently a <b>second-year student majoring in International Economics at Foreign Trade University</b>.
 
 My hometown is <b>Hung Yen province (former Thai Binh)</b>.
 
-I am interested in technology, programming and data analysis.
+I am interested in technology, programming and data analysis. I enjoy learning new skills and exploring new knowledge.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section id="mbti">
+
+<h2>MBTI Personality</h2>
+
+<div class="card mbti">
+
+<img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png">
+
+<p>
+
+I have an <b>INFJ personality type</b>, which means I tend to think deeply and approach problems in a thoughtful and analytical way.
+
+I enjoy understanding complex ideas, exploring patterns, and finding meaningful solutions.
+
+I am naturally detail-oriented and motivated to learn continuously, especially in areas related to data, technology, and problem solving.
+
+I also value collaboration and empathy, which helps me communicate ideas clearly and work effectively with others.
 
 </p>
 
@@ -215,10 +261,9 @@ I am interested in technology, programming and data analysis.
 
 <h2>Skills</h2>
 
+<div class="card">
 
-<div class="card skill-category">
-
-<h3>Data & Office Tools</h3>
+<h3><i class="fa-solid fa-chart-simple"></i> Data & Office Tools</h3>
 
 <div class="skill">
 <div class="skill-name">Microsoft Excel</div>
@@ -240,34 +285,20 @@ I am interested in technology, programming and data analysis.
 <div class="bar"><div class="fill" style="width:100%"></div></div>
 </div>
 
-</div>
 
-
-<div class="card skill-category">
-
-<h3>Programming & Tools</h3>
+<h3 style="margin-top:30px">
+<i class="fa-solid fa-code"></i> Programming
+</h3>
 
 <div class="skill">
 <div class="skill-name">Python (Basic)</div>
 <div class="bar"><div class="fill" style="width:60%"></div></div>
 </div>
 
-<div class="skill">
-<div class="skill-name">Photo Editing</div>
-<div class="bar"><div class="fill" style="width:70%"></div></div>
-</div>
 
-<div class="skill">
-<div class="skill-name">CapCut</div>
-<div class="bar"><div class="fill" style="width:70%"></div></div>
-</div>
-
-</div>
-
-
-<div class="card skill-category">
-
-<h3>Languages</h3>
+<h3 style="margin-top:30px">
+<i class="fa-solid fa-language"></i> Languages
+</h3>
 
 <div class="skill">
 <div class="skill-name">Vietnamese (Native)</div>
@@ -293,7 +324,7 @@ I am interested in technology, programming and data analysis.
 
 <h2>Education</h2>
 
-<div class="card">
+<div class="card edu">
 
 <p><b>Foreign Trade University</b></p>
 
@@ -312,10 +343,13 @@ I am interested in technology, programming and data analysis.
 
 <div class="card contact">
 
-<p>Email: phamkhanhhoa2006tb@gmail.com</p>
+<p>
+<i class="fa-solid fa-envelope"></i>
+phamkhanhhoa2006tb@gmail.com
+</p>
 
 <p>
-Github:
+<i class="fa-brands fa-github"></i>
 <a href="https://github.com/phamkhanhhoa2006tb-dev">
 github.com/phamkhanhhoa2006tb-dev
 </a>
