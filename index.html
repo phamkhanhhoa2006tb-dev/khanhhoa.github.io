@@ -21,10 +21,10 @@ box-sizing:border-box;
 }
 
 body{
-font-family:"Times New Roman", serif;
+font-family:"Times New Roman",serif;
 background:#f8f6f2;
 color:#222;
-line-height:1.6;
+line-height:1.7;
 }
 
 /* NAVBAR */
@@ -45,6 +45,7 @@ margin:0 20px;
 text-decoration:none;
 color:#1d3557;
 font-weight:bold;
+font-size:18px;
 }
 
 nav a:hover{
@@ -66,8 +67,8 @@ padding:20px;
 }
 
 .hero img{
-width:180px;
-height:180px;
+width:190px;
+height:190px;
 border-radius:50%;
 object-fit:cover;
 border:6px solid #f8f6f2;
@@ -75,23 +76,23 @@ margin-bottom:20px;
 }
 
 .hero h1{
-font-size:56px;
+font-size:58px;
 letter-spacing:2px;
 }
 
 .hero p{
-font-size:20px;
-margin-top:8px;
+font-size:22px;
+margin-top:6px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
-padding:80px 20px;
+padding:90px 20px;
 }
 
 .container{
-max-width:1000px;
+max-width:900px;
 margin:auto;
 }
 
@@ -104,20 +105,30 @@ text-align:center;
 
 .about h2{
 color:#1d3557;
-margin-bottom:20px;
-font-size:34px;
+margin-bottom:25px;
+font-size:36px;
+}
+
+.about p{
+font-size:22px;
 }
 
 /* MBTI */
 
 .mbti{
-background:#ffffff;
+background:white;
 }
 
 .mbti h2{
 text-align:center;
 color:#1d3557;
-margin-bottom:20px;
+margin-bottom:25px;
+font-size:36px;
+}
+
+.mbti p{
+font-size:22px;
+text-align:center;
 }
 
 /* SKILLS */
@@ -130,26 +141,32 @@ background:#e9f2fb;
 text-align:center;
 color:#1d3557;
 margin-bottom:40px;
+font-size:36px;
 }
 
-.skill-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+/* SKILL BAR */
+
+.skill{
+margin-bottom:22px;
 }
 
-.skill-box{
-background:white;
-padding:20px;
-border-radius:10px;
-text-align:center;
+.skill-name{
 font-weight:bold;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
-transition:0.2s;
+margin-bottom:6px;
+font-size:18px;
 }
 
-.skill-box:hover{
-transform:translateY(-5px);
+.skill-bar{
+width:100%;
+height:12px;
+background:#cfe0f3;
+border-radius:20px;
+overflow:hidden;
+}
+
+.skill-fill{
+height:100%;
+background:#1d3557;
 }
 
 /* EDUCATION */
@@ -162,6 +179,11 @@ text-align:center;
 .education h2{
 color:#1d3557;
 margin-bottom:20px;
+font-size:36px;
+}
+
+.education p{
+font-size:20px;
 }
 
 /* CONTACT */
@@ -170,6 +192,16 @@ margin-bottom:20px;
 background:#1d3557;
 color:white;
 text-align:center;
+}
+
+.contact h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:20px;
+margin:10px;
 }
 
 .contact i{
@@ -183,6 +215,7 @@ text-align:center;
 padding:20px;
 background:#0d1b2a;
 color:white;
+font-size:16px;
 }
 
 </style>
@@ -223,13 +256,12 @@ color:white;
 
 <p>
 
-Hello! My name is <b>Phạm Khánh Hòa</b>.
+Hello! My name is <b>Phạm Khánh Hòa</b>.  
+I was born on March 9, 2006.  
 
-I was born on March 9, 2006.
+I am currently a second-year student majoring in <b>International Economics</b> at <b>Foreign Trade University</b>.  
 
-I am currently a second-year student majoring in International Economics at Foreign Trade University.
-
-My hometown is Hung Yen (former Thai Binh).
+My hometown is <b>Hung Yen</b> (former Thai Binh).  
 
 I am interested in technology, programming and data analysis.
 
@@ -246,13 +278,13 @@ I am interested in technology, programming and data analysis.
 
 <h2>MBTI Personality</h2>
 
-<p style="text-align:center">
+<p>
 
-I have an <b>INFJ personality type</b>, which means I tend to think deeply and approach problems in a thoughtful and analytical way.
+I have an <b>INFJ personality type</b>, which means I tend to think deeply and approach problems in a thoughtful and analytical way.  
 
-I enjoy understanding complex ideas, exploring patterns, and finding meaningful solutions.
+I enjoy understanding complex ideas, exploring patterns, and finding meaningful solutions.  
 
-I am naturally detail-oriented and motivated to learn continuously, especially in areas related to data, technology, and problem solving.
+I am naturally detail-oriented and motivated to learn continuously, especially in areas related to data, technology, and problem solving.  
 
 I also value collaboration and empathy, which helps me communicate ideas clearly and work effectively with others.
 
@@ -269,18 +301,82 @@ I also value collaboration and empathy, which helps me communicate ideas clearly
 
 <h2>Skills</h2>
 
-<div class="skill-grid">
+<div class="skill">
 
-<div class="skill-box">Microsoft Excel</div>
-<div class="skill-box">Microsoft Word</div>
-<div class="skill-box">Microsoft PowerPoint</div>
-<div class="skill-box">Microsoft Access</div>
+<div class="skill-name">Microsoft Excel</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:100%"></div>
+</div>
 
-<div class="skill-box">Python (Basic)</div>
+</div>
 
-<div class="skill-box">Vietnamese (Native)</div>
-<div class="skill-box">English (Fluent)</div>
-<div class="skill-box">Chinese (Basic)</div>
+
+<div class="skill">
+
+<div class="skill-name">Microsoft Word</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:100%"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-name">Microsoft PowerPoint</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:100%"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-name">Microsoft Access</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:100%"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-name">Python (Basic)</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:60%"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-name">Vietnamese (Native)</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:100%"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-name">English (Fluent)</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:85%"></div>
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-name">Chinese (Basic)</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:50%"></div>
+</div>
 
 </div>
 
